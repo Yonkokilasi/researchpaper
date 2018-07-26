@@ -45,10 +45,66 @@ body {
 }
 
 .header-content {
-    background: -webkit-linear-gradient(45deg, #853c8a 0, #3cdcea 100%);
-    padding: 2rem;
+    background-image: url(img/pen.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+
+}
+/* ----- NAVIGATION ----- */
+
+.navbar {
+    background-color: #81F0E5;
 }
 
+.icons {
+    text-align: center;
+}
+
+.iconic {
+    max-width: 320px;
+    display: inline-block;
+    margin: 4rem;
+}
+
+.iconic>i {
+    font-size: 4.4rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.iconic>.fa-diamond {
+    font-size: 4.0rem;
+}
+
+.icon-circle-background {
+    border: 1px solid #1895d8;
+    background-color: #1895d8;
+    border-radius: 50%;
+    padding: 23px;
+    width: 118px;
+    height: 118px;
+}
+
+.calculator {
+    border: #853c8a 3px solid;
+    border-radius: 6rem;
+    vertical-align: middle;
+    margin: 12rem 41rem;
+    padding: 1rem 2rem;
+    text-align: left;
+    float: left;
+}
+
+.display_cost {
+    text-align: center;
+    display: inline;
+    padding: 1rem;
+    font-family: 'Ubuntu';
+    color: #fff;
+}
+/* ----- End of Navigation ----- */
 section.header-top {
     text-align: center;
     margin-top: 5rem;
@@ -82,52 +138,7 @@ h1 {
     font-size: 2.0rem;
 }
 
-.icons {
-    text-align: center;
-}
 
-.iconic {
-    max-width: 320px;
-    display: inline-block;
-    margin: 4rem;
-}
-
-.iconic>i {
-    font-size: 4.4rem;
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.iconic>.fa-diamond {
-    font-size: 4.0rem;
-}
-
-.icon-circle-background {
-    border: 1px solid #1895d8;
-    background-color: #1895d8;
-    border-radius: 50%;
-    padding: 23px;
-    width: 118px;
-    height: 118px;
-}
-
-.calculator {
-    border: #fff 1px solid;
-    border-radius: 2rem;
-    vertical-align: top;
-    margin: 0rem 2rem;
-    padding: 1rem 2rem;
-    text-align: left;
-    float: right;
-}
-
-.display_cost {
-    text-align: center;
-    display: inline;
-    padding: 1rem;
-    font-family: 'Ubuntu';
-    color: #fff;
-}
 
 #lblRes {
     display: inline;
@@ -244,8 +255,8 @@ fieldset {
 }
 
 .logo>a>img {
-    width: 200px;
-    display: inline-block;
+    width: 192px;
+ 
 }
 
 hr {
@@ -284,13 +295,13 @@ ul.topnav li {
 
 ul.topnav li a {
     display: inline-block;
-    color: #144b92;
+    color: #223335;
     text-align: center;
     margin: 4px;
     text-decoration: none;
     padding: 4px 10px;
     transition: 0.3s;
-    font-size: 13px;
+    font-size: 17px;
     font-weight: bold;
     font-family: "Ubuntu";
 }
@@ -307,7 +318,7 @@ ul.topnav li a {
 ul.topnav li a:hover {
     cursor: pointer;
     color: #fff;
-    background-color: #1098a0;
+    background-color:#654C4F;
     padding: 6px;
     border-radius: .3rem;
 }

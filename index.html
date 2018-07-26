@@ -18,65 +18,67 @@ include("php/connect.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
-<body id="top">
-    <div class="overlay"></div>
-    <div class="header-content">
+
+<body id="top ">
+
+    <div class="header-content ">
 
         <div class="navigation row ">
 
-            <div class="logo col-md-2">
-                <a href="https://www.researchpaperweb.com/">
-                    <img alt="research-paper-web-logo" src="img/rpwLOGO.png" />
-                </a>
-            </div>
+            <nav class="navbar navbar-expand-lg fixed-top ">
+                <div class="logo col-md-2">
+                    <a class="navbar-brand" href="https://www.researchpaperweb.com/">
+                        <img alt="research-paper-web-logo" src="img/rpwLOGO.png" />
+                    </a>
+                </div>
 
-            <div class="menu col-md-10">
-                <ul class="topnav " id="myTopnav">
-                    <li class="icon">
-                        <a href="javascript:void(0);" onclick="myFunction()">&#9776; Menu</a>
-                    </li>
-                    <li>
-                        <a href="how-it-works.php">HOW IT WORKS</a>
-                    </li>
-                    <li>
-                        <a href="frequently-asked-questions.php">FAQs</a>
-                    </li>
-                    <li>
-                        <a href="samples.php">SAMPLES</a>
-                    </li>
-                    <li class="dropdown_holder">
-                        <a href="#">SERVICES</a>
-                        <ul class="dropdown">
-                            <?php
+                <div class="menu col-md-10">
+                    <ul class="topnav navbar-nav " id="myTopnav">
+                        <li class="icon ">
+                            <a class="nav-link" href="javascript:void(0);" onclick="myFunction()">&#9776; Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="how-it-works.php">HOW IT WORKS</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="frequently-asked-questions.php">FAQs</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="samples.php">SAMPLES</a>
+                        </li>
+                        <li class="dropdown_holder nav-item">
+                            <a href="#">SERVICES</a>
+                            <ul class="dropdown">
+                                <?php
                 $sql            = "SELECT * FROM seo WHERE page_column = 'Column One'";
                 $result         = mysqli_query($Con, $sql);
                 while($row      = mysqli_fetch_assoc($result)){
                     $url        = $row['url'];
                     $url_name   = $row['url_name'];
                 ?>
-                                <li>
-                                    <a href="<?php echo $url; ?>">
-                                        <?php echo $url_name; ?>
-                                    </a>
-                                </li>
-                                <?php
+                                    <li>
+                                        <a href="<?php echo $url; ?>">
+                                            <?php echo $url_name; ?>
+                                        </a>
+                                    </li>
+                                    <?php
                 }
                 ?>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="blog.php">BLOG</a>
-                    </li>
-                    <li>
-                        <a href="post-order.php" style="color: #fff;" class="special_link" rel="nofollow">
-                            <i class="fa fa-shopping-cart"></i> ORDER</a>
-                    </li>
-                    <li>
-                        <a href="login.php" style="color: #fff;" class="special_link">
-                            <i class="fa fa-lock"></i> LOG IN</a>
-                    </li>
-                </ul>
-            </div>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                                <a href="blog.php">BLOG</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="post-order.php" style="color: #fff;" class="special_link" rel="nofollow">
+                                <i class="fa fa-shopping-cart"></i> ORDER</a>
+                        </li>
+                        <li class="nav-item">
+                                <a href="login.php" style="color: #fff;" class="special_link">
+                                <i class="fa fa-lock"></i> LOG IN</a>
+                        </li>
+                    </ul>
+            </nav>
         </div>
         <script>
             function myFunction() {
@@ -88,97 +90,81 @@ include("php/connect.php");
                 }
             }
         </script>
-        <section class="header-top">
-            <h1 class="relax">Relax, We Write Your Research Papers and Essays!</h1>
 
-            <img class="pen-img-under-relax" src="img/research-paper-writing.png" alt="research-paper-writing">
+    
 
-            <div class="subholder">
-
-                <h2 class="subheading">
-                    <i class="fa fa-check-circle-o"></i> Quality research papers</h2>
-                <h2 class="subheading">
-                    <i class="fa fa-check-circle-o"></i> Cheap research papers</h2>
-                <h2 class="subheading">
-                    <i class="fa fa-check-circle-o"></i> Plagiarism free essays</h2>
-                <h2 class="subheading">
-                    <i class="fa fa-check-circle-o"></i> Free plagiarism report</h2>
-                <h2 class="subheading">
-                    <i class="fa fa-check-circle-o"></i> Research papers for sale</h2>
-
+    <section class="header-top">
+        <div class="calculator">
+            <h3 class="calc_h3">Calculate Your Price Here</h3>
+            <hr />
+            <form method="post" action="" id="calc">
+                <fieldset>
+                    <label for="level">Academic Level</label>
+                    <select name="level" id="level" onchange="Calculate();">
+                        <option value="1.6">High School</option>
+                        <option value="1.8" selected>Undergraduate</option>
+                        <option value="1.8">Masters</option>
+                        <option value="1.9">Doctorate</option>
+                    </select>
+                    <br />
+                    <label for="deadline">Pages</label>
+                    <select name="page" id="page" onchange="Calculate();">
+                        <option value="1">275 Words / 1 Page</option>
+                        <option value="2">550 Words / 2 Pages</option>
+                        <option value="3">825 Words / 3 Pages</option>
+                        <option value="4">1100 Words / 4 Pages</option>
+                        <option value="5">1375 Words / 5 Pages</option>
+                        <option value="6">1650 Words / 6 Pages</option>
+                        <option value="7">1925 Words / 7 Pages</option>
+                        <option value="8">2200 Words / 8 Pages</option>
+                        <option value="9">2475 Words / 9 Pages</option>
+                        <option value="10">2750 Words / 10 Pages</option>
+                        <option value="11">3025 Words / 11 Pages</option>
+                        <option value="12">3300 Words / 12 Pages</option>
+                        <option value="13">3575 Words / 13 Pages</option>
+                        <option value="14">3850 Words / 14 Pages</option>
+                        <option value="15">4125 Words / 15 Pages</option>
+                        <option value="16">4400 Words / 16 Pages</option>
+                        <option value="17">4675 Words / 17 Pages</option>
+                        <option value="18">4950 Words / 18 Pages</option>
+                        <option value="19">5225 Words / 19 Pages</option>
+                        <option value="20">5500 Words / 20 Pages</option>
+                    </select>
+                    <br />
+                    <label for="deadline">Deadline</label>
+                    <select name="deadline" id="deadline" onchange="Calculate();">
+                        <option value="1.2">6 Hours</option>
+                        <option value="1.1">12 Hours</option>
+                        <option value="1.0">1 Day</option>
+                        <option value="0.95">2 Days</option>
+                        <option value="0.9">3 Days</option>
+                        <option value="0.85">4 Days</option>
+                        <option value="0.8">5 Days</option>
+                        <option value="0.75">7 Days</option>
+                        <option selected="selected" value="0.7">14 Days</option>
+                        <option value="0.65">30 Days</option>
+                    </select>
+                </fieldset>
+            </form>
+            <div class="display_cost">Total Cost:
+                <div class="dollar_sign">&#36;</div>
+                <div id="lblRes">13</div>
+                <a class="calc_order" href="post-order.php" rel="nofollow">CONTINUE</a>
             </div>
+        </div>
 
-            <div class="calculator">
-                <h3 class="calc_h3">Calculate Your Price Here</h3>
-                <hr />
-                <form method="post" action="" id="calc">
-                    <fieldset>
-                        <label for="level">Academic Level</label>
-                        <select name="level" id="level" onchange="Calculate();">
-                            <option value="1.6">High School</option>
-                            <option value="1.8" selected>Undergraduate</option>
-                            <option value="1.8">Masters</option>
-                            <option value="1.9">Doctorate</option>
-                        </select>
-                        <br />
-                        <label for="deadline">Pages</label>
-                        <select name="page" id="page" onchange="Calculate();">
-                            <option value="1">275 Words / 1 Page</option>
-                            <option value="2">550 Words / 2 Pages</option>
-                            <option value="3">825 Words / 3 Pages</option>
-                            <option value="4">1100 Words / 4 Pages</option>
-                            <option value="5">1375 Words / 5 Pages</option>
-                            <option value="6">1650 Words / 6 Pages</option>
-                            <option value="7">1925 Words / 7 Pages</option>
-                            <option value="8">2200 Words / 8 Pages</option>
-                            <option value="9">2475 Words / 9 Pages</option>
-                            <option value="10">2750 Words / 10 Pages</option>
-                            <option value="11">3025 Words / 11 Pages</option>
-                            <option value="12">3300 Words / 12 Pages</option>
-                            <option value="13">3575 Words / 13 Pages</option>
-                            <option value="14">3850 Words / 14 Pages</option>
-                            <option value="15">4125 Words / 15 Pages</option>
-                            <option value="16">4400 Words / 16 Pages</option>
-                            <option value="17">4675 Words / 17 Pages</option>
-                            <option value="18">4950 Words / 18 Pages</option>
-                            <option value="19">5225 Words / 19 Pages</option>
-                            <option value="20">5500 Words / 20 Pages</option>
-                        </select>
-                        <br />
-                        <label for="deadline">Deadline</label>
-                        <select name="deadline" id="deadline" onchange="Calculate();">
-                            <option value="1.2">6 Hours</option>
-                            <option value="1.1">12 Hours</option>
-                            <option value="1.0">1 Day</option>
-                            <option value="0.95">2 Days</option>
-                            <option value="0.9">3 Days</option>
-                            <option value="0.85">4 Days</option>
-                            <option value="0.8">5 Days</option>
-                            <option value="0.75">7 Days</option>
-                            <option selected="selected" value="0.7">14 Days</option>
-                            <option value="0.65">30 Days</option>
-                        </select>
-                    </fieldset>
-                </form>
-                <div class="display_cost">Total Cost:
-                    <div class="dollar_sign">&#36;</div>
-                    <div id="lblRes">13</div>
-                    <a class="calc_order" href="post-order.php" rel="nofollow">CONTINUE</a>
-                </div>
-            </div>
+        <script type="text/javascript">
+            function Calculate() {
+                var l = document.getElementById('level').value;
+                var p = document.getElementById('page').value;
+                var d = document.getElementById('deadline').value;
+                var result = l * p * d * 10.5 + 2.0;
+                result = parseFloat(result).toFixed(0);
+                document.getElementById('lblRes').innerHTML = result;
+            }
+        </script>
 
-            <script type="text/javascript">
-                function Calculate() {
-                    var l = document.getElementById('level').value;
-                    var p = document.getElementById('page').value;
-                    var d = document.getElementById('deadline').value;
-                    var result = l * p * d * 10.5 + 2.0;
-                    result = parseFloat(result).toFixed(0);
-                    document.getElementById('lblRes').innerHTML = result;
-                }
-            </script>
-
-        </section>
+    </section>
 
 
     </div>

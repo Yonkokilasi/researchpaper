@@ -2,107 +2,100 @@
 $(".alert").delay(30000).fadeOut(10000);
 
 $(document).ready(function () {
+
+    // change color of navbar onscroll
+    $(document).scroll(function () {
+        var $nav = $(".navbar");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+
     // $(":submit").attr("disabled", true);
 
-    $('.wizard-content-details').show(500);
-    $('.wizard-content-instructions').hide();
-    $('.wizard-content-calculator').hide();
-    $('.wizard-content-login').hide();
-    $('.wizard-content-add').hide();
+    // Show the first section with an animation
+    $('.wizard_content_details').show();
 
-    $('.wizard-heading-details-after').hide();
-    $('.wizard-heading-instructions-active').hide();
-    $('.wizard-heading-instructions-after').hide();
-    $('.wizard-heading-calculations-active').hide();
-    $('.wizard-heading-calculations-after').hide();
-    $('.wizard-heading-login-after').hide();
-    $('.wizard-heading-login-active').hide();
-    $('.wizard-heading-add-after').hide();
-    $('.wizard-heading-add-active').hide();
+    // Continue is clicked on paper details section
+    $('#next-details').click(function () {
+        // Hide paper details section
+        $('.wizard_heading_details').removeClass('active_heading').addClass('clickable_heading details_clickable');
+        $('.wizard_content_details').hide();
 
-    $('.next-details').click(function () {
-        $('.wizard-content-details').hide();
-        $('.wizard-content-instructions').show(1500);
-
-        $('.wizard-heading-details-active').hide();
-        $('.wizard-heading-details-after').show();
-        $('.wizard-heading-instructions-active').show();
-        $('.wizard-heading-instructions-before').hide();
+        // Show paper content section
+        $('.wizard_content_instructions').show(1000);
+        $('.wizard_heading_instructions').addClass('active_heading');
     });
 
-    $('.next-instructions').click(function () {
-        $('.wizard-content-instructions').hide();
-        $('.wizard-content-calculator').show(1500);
+    // Continue is clicked on paper instructions section
+    $('#next-instructions').click(function () {
+        // Hide instructions section
+        $('.wizard_heading_instructions').removeClass('active_heading').addClass('clickable_heading');
+        $('.wizard_content_instructions').hide();
 
-        $('.wizard-heading-instructions-active').hide();
-        $('.wizard-heading-instructions-after').show();
-        $('.wizard-heading-calculations-active').show();
-        $('.wizard-heading-calculations-before').hide();
-
+        // Show calculator section
+        $('.wizard_content_calculator').show(1000);
+        $('.wizard_heading_calculator').addClass('active_heading');
     });
 
-    $('.next-add').click(function () {
-        $('.wizard-content-add').hide();
-        $('.wizard-content-login').show(1500);
+    // Continue is clicked on calculator section
+    $('#next-calculator').click(function () {
 
-        $('.wizard-heading-add-active').hide();
-        $('.wizard-heading-add-after').show();
-        $('.wizard-heading-login-active').show();
-        $('.wizard-heading-login-before').hide();
+        // Hide Calculations section
+        $('.wizard_content_calculator').hide();
+        $('.wizard_heading_calculator').removeClass('active_heading').addClass('clickable_heading');
+
+        // Show additional feature section
+        $('.wizard_content_additional_features').show(1000);
+        $('.wizard_heading_additional_features').addClass('active_heading');
+
+        //Show all other headings
+        $('.wizard_heading_details').show();
+        $('.wizard_heading_instructions').show();
+        $('.wizard_heading_calculator').show();
+        $('.wizard_heading_additional_features').show();
 
     });
 
-    $('.next-calculator').click(function () {
-        $('.wizard-content-details').hide();
-        $('.wizard-content-instructions').hide();
-        $('.wizard-content-calculator').hide();
-        $('.wizard-content-add').show(1500);
+    // Continue is clicked on additional features section
+    $('#next-add').click(function () {
+        // Hide Additional  features section
+        $('.wizard_content_additional_features').hide();
+        $('.wizard_heading_additional_features').removeClass('active_heading').addClass('clickable_heading clickable');
 
-        $('.wizard-heading-calculations-active').hide();
-        $('.wizard-heading-calculations-after').show();
-        // $('.wizard-heading-add-after').show();
-        $('.wizard-heading-add-before').hide();
-        $('.wizard-heading-login-before').show();
-        $('.wizard-heading-add-active').show();
-
+        // Show login section
+        $('.wizard_content_login').show(1500);
+        $('.wizard_heading_login').addClass('active_heading');
     });
 
-    $('.wizard-heading-details-after').click(function () {
-        $('.wizard-content-details').slideToggle('slow');
-        $('.wizard-content-add').hide();
-        $('.wizard-content-calculator').hide();
-        $('.wizard-content-login').hide();
-        $('.wizard-content-instructions').hide();
-        $('.wizard-content-calculator').hide();
+    $('.wizard_heading_instructions').click(function () {
+        $('.wizard_heading_instructions').addClass('active_heading ').removeClass('clickable_heading');
+        $('.wizard_heading_additional_features').removeClass('active_heading').addClass('clickable_heading');
+        $('.wizard_heading_login').removeClass('active_heading').addClass('clickable_heading');
+        $('.wizard_content_instructions').slideToggle('slow');
+        $('.wizard_content_additional_features').hide();
+        $('.wizard_content_details').hide();
+        $('.wizard_content_calculator').hide();
+        $('.wizard_content_login').hide();
+        $('.wizard_content_calculator').hide();
     });
 
-    $('.wizard-heading-instructions-after').click(function () {
-        $('.wizard-content-instructions').slideToggle('slow');
-        $('.wizard-content-add').hide();
-        $('.wizard-content-details').hide();
-        $('.wizard-content-calculator').hide();
-        $('.wizard-content-login').hide();
-        $('.wizard-content-calculator').hide();
+    $('.wizard_heading_calculations').click(function () {
+        $('.wizard_content_calculator').slideToggle('slow');
+        $('.wizard_content_additional_features').hide();
+        $('.wizard_content_login').hide();
+        $('.wizard_content_details').hide();
+        $('.wizard_content_instructions').hide();
     });
 
-    $('.wizard-heading-calculations-after').click(function () {
-        $('.wizard-content-calculator').slideToggle('slow');
-        $('.wizard-content-add').hide();
-        $('.wizard-content-login').hide();
-        $('.wizard-content-details').hide();
-        $('.wizard-content-instructions').hide();
+    $('.wizard_heading_additional_features').click(function () {
+        $('.wizard_content_additional_features').slideToggle('slow');
+        $('.wizard_content_login').hide();
+        $('.wizard_content_details').hide();
+        $('.wizard_content_calculator').hide();
+        $('.wizard_content_instructions').hide();
     });
 
-    $('.wizard-heading-add-after').click(function () {
-        $('.wizard-content-add').slideToggle('slow');
-        $('.wizard-content-login').hide();
-        $('.wizard-content-details').hide();
-        $('.wizard-content-calculator').hide();
-        $('.wizard-content-instructions').hide();
-    });
-
-    $('.wizard-heading-login-after').click(function () {
-        $('.wizard-content-login').slideToggle('slow');
+    $('.wizard_heading_login').click(function () {
+        $('.wizard_content_login').slideToggle('slow');
     });
 
 });
@@ -136,15 +129,15 @@ function checkAmount() {
     }
 
 }
-// Check promotional amount
+// Check amount from form input
 
 var forceSubmit = false;
 
-function calculator(idseli) {
+function calculator(value) {
 
-    // Hish School
+    // High School
     var acadlvl = ""; //Academic level
-    var typ = ""; //Type Of Work
+    var type = ""; //Type Of Work
     var num = ""; //Number Of pages
     var deadline = ""; //date
     var sp = ""; // spacing
@@ -156,12 +149,13 @@ function calculator(idseli) {
         "promoCode": promoCodes
     }, function (data) {
         //alert(data);
-        if (idseli == "#typeOfWork") {
+        if (value == "#typeOfWork") {
 
 
-            typ = $(idseli + " option:selected").val();
+            type = $(value + " option:selected").val();
             acadlvl = document.querySelector('input[name="level"]:checked').value;
             num = $("#pages").val();
+            console.log("Here we go ", num);
             deadline = $("#deadline").val();
             digitalSources = $("#digitalSources").val();
             sp = document.querySelector('input[name="spacing"]:checked').value;
@@ -176,35 +170,12 @@ function calculator(idseli) {
                 promoCode = (1 - parseInt(data) / 100);
             }
 
-
-
-
         }
-        if (idseli == "#deadline") {
-            deadline = $(idseli + " option:selected").val();
+        if (value == "#deadline") {
+            deadline = $(value + " option:selected").val();
             acadlvl = document.querySelector('input[name="level"]:checked').value;
             num = $("#pages").val();
-            typ = $("#typeOfWork").val();
-            digitalSources = $("#digitalSources").val();
-            sp = document.querySelector('input[name="spacing"]:checked').value;
-            if ($("#specificWriter").val() == '') {
-                specificWriter = 0;
-            } else {
-                specificWriter = 5;
-            }
-            if (data == 1) {
-                promoCode = parseInt(data);
-            } else {
-                promoCode = (1 - parseInt(data) / 100);
-            }
-
-
-        }
-        if (idseli == "#pages") {
-            num = $(idseli + " option:selected").val();
-            deadline = $("#deadline").val();
-            acadlvl = document.querySelector('input[name="level"]:checked').value;
-            typ = $("#typeOfWork").val();
+            type = $("#typeOfWork").val();
             digitalSources = $("#digitalSources").val();
             sp = document.querySelector('input[name="spacing"]:checked').value;
             if ($("#specificWriter").val() == '') {
@@ -220,11 +191,32 @@ function calculator(idseli) {
 
 
         }
-        if (idseli == "#spacing") {
+        if (value == "#pages") {
+
+            num = $("#pages").val();
+            deadline = $("#deadline").val();
+            acadlvl = document.querySelector('input[name="level"]:checked').value;
+            type = $("#typeOfWork").val();
+            digitalSources = $("#digitalSources").val();
+            sp = document.querySelector('input[name="spacing"]:checked').value;
+            if ($("#specificWriter").val() == '') {
+                specificWriter = 0;
+            } else {
+                specificWriter = 5;
+            }
+            if (data == 1) {
+                promoCode = parseInt(data);
+            } else {
+                promoCode = (1 - parseInt(data) / 100);
+            }
+
+
+        }
+        if (value == "#spacing") {
             sp = document.querySelector('input[name="spacing"]:checked').value;
             deadline = $("#deadline").val();
             acadlvl = document.querySelector('input[name="level"]:checked').value;
-            typ = $("#typeOfWork").val();
+            type = $("#typeOfWork").val();
             digitalSources = $("#digitalSources").val();
             num = $("#pages").val();
             if ($("#specificWriter").val() == '') {
@@ -239,50 +231,11 @@ function calculator(idseli) {
             }
 
         }
-        if (idseli == "#level") {
+        if (value == "#level") {
             acadlvl = document.querySelector('input[name="level"]:checked').value;
             deadline = $("#deadline").val();
             sp = document.querySelector('input[name="spacing"]:checked').value;
-            typ = $("#typeOfWork").val();
-            num = $("#pages").val();
-            digitalSources = $("#digitalSources").val();
-            if ($("#specificWriter").val() == '') {
-                specificWriter = 0;
-            } else {
-                specificWriter = 5;
-            }
-            if (data == 1) {
-                promoCode = parseInt(data);
-            } else {
-                promoCode = (1 - parseInt(data) / 100);
-            }
-
-
-        }
-        if (idseli == "#specificWriter") {
-            acadlvl = document.querySelector('input[name="level"]:checked').value;
-            deadline = $("#deadline").val();
-            sp = document.querySelector('input[name="spacing"]:checked').value;
-            typ = $("#typeOfWork").val();
-            num = $("#pages").val();
-            digitalSources = $("#digitalSources").val();
-            if ($("#specificWriter").val() == '') {
-                specificWriter = 0;
-            } else {
-                specificWriter = 5;
-            }
-            if (data == 1) {
-                promoCode = parseInt(data);
-            } else {
-                promoCode = (1 - parseInt(data) / 100);
-            }
-
-        }
-        if (idseli == "#promoCode") {
-            acadlvl = document.querySelector('input[name="level"]:checked').value;
-            deadline = $("#deadline").val();
-            sp = document.querySelector('input[name="spacing"]:checked').value;
-            typ = $("#typeOfWork").val();
+            type = $("#typeOfWork").val();
             num = $("#pages").val();
             digitalSources = $("#digitalSources").val();
             if ($("#specificWriter").val() == '') {
@@ -298,12 +251,51 @@ function calculator(idseli) {
 
 
         }
-        if (idseli == "#digitalSources") {
-            digitalSources = $(idseli + " option:selected").val();
+        if (value == "#specificWriter") {
             acadlvl = document.querySelector('input[name="level"]:checked').value;
             deadline = $("#deadline").val();
             sp = document.querySelector('input[name="spacing"]:checked').value;
-            typ = $("#typeOfWork").val();
+            type = $("#typeOfWork").val();
+            num = $("#pages").val();
+            digitalSources = $("#digitalSources").val();
+            if ($("#specificWriter").val() == '') {
+                specificWriter = 0;
+            } else {
+                specificWriter = 5;
+            }
+            if (data == 1) {
+                promoCode = parseInt(data);
+            } else {
+                promoCode = (1 - parseInt(data) / 100);
+            }
+
+        }
+        if (value == "#promoCode") {
+            acadlvl = document.querySelector('input[name="level"]:checked').value;
+            deadline = $("#deadline").val();
+            sp = document.querySelector('input[name="spacing"]:checked').value;
+            type = $("#typeOfWork").val();
+            num = $("#pages").val();
+            digitalSources = $("#digitalSources").val();
+            if ($("#specificWriter").val() == '') {
+                specificWriter = 0;
+            } else {
+                specificWriter = 5;
+            }
+            if (data == 1) {
+                promoCode = parseInt(data);
+            } else {
+                promoCode = (1 - parseInt(data) / 100);
+            }
+
+
+        }
+        if (value == "#digitalSources") {
+            digitalSources = $(value + " option:selected").val();
+            acadlvl = document.querySelector('input[name="level"]:checked').value;
+            deadline = $("#deadline").val();
+            sp = document.querySelector('input[name="spacing"]:checked').value;
+            type = $("#typeOfWork").val();
             num = $("#pages").val();
             if ($("#specificWriter").val() == '') {
                 specificWriter = 0;
@@ -318,10 +310,19 @@ function calculator(idseli) {
 
         }
 
-        result1 = parseFloat(promoCode) * parseFloat(typ) * parseFloat(acadlvl) * parseFloat(num) * parseFloat(deadline) * parseFloat(sp) + parseFloat(specificWriter) + parseFloat(digitalSources) + parseFloat('2.0');
+        // if the promocode is incorrect set it to 1 
+        if (isNaN(promoCode)) {
+            promoCode = 1;
+        }
 
-        result = parseFloat(result1).toFixed(0);
-        //alert(result);
+        result1 = parseFloat(promoCode) * parseFloat(type) * parseFloat(acadlvl) * parseFloat(num) * parseFloat(deadline) * parseFloat(sp) + parseFloat(specificWriter) + parseFloat(digitalSources) + parseFloat('2.0');
+
+        if (isNaN(result1)) {
+            return;
+        } else {
+            result = parseFloat(result1).toFixed(0);
+        }
+
         $("#amount").attr("value", result);
         $("#amount2").attr("value", result);
         $("#grand_total").attr("value", result);

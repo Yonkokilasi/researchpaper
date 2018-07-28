@@ -54,8 +54,9 @@ body {
 
 /* ----- NAVIGATION ----- */
 
-.navbar {
-    background-color: #81F0E5;
+.navbar.fixed-top.scrolled {
+    background-color: #B2B09B !important;
+    transition: background-color 200ms linear;
 }
 
 .icons {
@@ -294,7 +295,7 @@ ul.topnav li {
 
 ul.topnav li a {
     display: inline-block;
-    color: #223335;
+    color: white;
     text-align: center;
     margin: 4px;
     text-decoration: none;
@@ -614,8 +615,12 @@ p {
     margin-bottom: 3rem;
 }
 
-.card {
+.cards-wrapper.card {
     height: 350px;
+}
+
+.list-group-item {
+    background-color: inherit;
 }
 
 .card-header {
@@ -644,9 +649,34 @@ p {
     -webkit-box-orient: vertical;
 }
 
+.card-btn,
+.green_btn {
+    background-color: #43AA8B;
+    color: white;
+}
+
 .card-btn {
     font-size: 10px;
-    background: -webkit-linear-gradient(45deg, #853c8a 0, #3cdcea 100%);
+}
+
+.floating-right-btn {
+    float: right;
+}
+
+.card-header:hover {
+    color: white;
+    background-color: #254441 !important;
+}
+
+.card-body:hover {
+    background-color: #FF6F59;
+    color: white;
+    /* background: -webkit-linear-gradient(45deg, #853c8a 0, #3cdcea 100%); */
+    transition: background 400ms linear;
+}
+
+.card-body:hover .fa {
+    color: white;
 }
 
 .card .card-body:hover .to-show {

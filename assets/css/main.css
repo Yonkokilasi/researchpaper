@@ -4,6 +4,27 @@ body {
     margin: 0;
 }
 
+h1 {
+    font-family: 'Ubuntu-L';
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+h2 {
+    font-family: 'Ubuntu-L';
+    font-size: 2.3rem;
+    color: #2C3C69;
+}
+
+h3 {
+    font-family: "Ubuntu-L";
+    font-size: 1.4rem;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
 @font-face {
     font-family: 'Open Sans';
     src: url('../fonts/OpenSans-Light.ttf')format('truetype');
@@ -59,253 +80,7 @@ body {
     transition: background-color 200ms linear;
 }
 
-.icons {
-    text-align: center;
-}
-
-.iconic {
-    max-width: 320px;
-    display: inline-block;
-    margin: 4rem;
-}
-
-.iconic>i {
-    font-size: 4.4rem;
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.iconic>.fa-diamond {
-    font-size: 4.0rem;
-}
-
-.icon-circle-background {
-    border: 1px solid #1895d8;
-    background-color: #1895d8;
-    border-radius: 50%;
-    padding: 23px;
-    width: 118px;
-    height: 118px;
-}
-
-.calculator {
-    border: #FF6F59 2px solid;
-    border-radius: 3rem;
-    vertical-align: middle;
-    padding: 1rem 2rem;
-    text-align: left;
-    float: left;
-    background-color: white;
-}
-
-.display_cost {
-    text-align: center;
-    display: inline;
-    padding: 1rem;
-    font-family: 'Ubuntu';
-    color: #fff;
-}
-
-/* ----- End of Navigation ----- */
-
-.red-btn,
-.green-btn,
-.relax_heading {
-    color: white;
-}
-
-.relax_heading {
-    margin-top: 7rem;
-    font-weight: bold;
-    margin-bottom: 4rem;
-}
-
-.btn-xl {
-    font-size: 18px;
-    padding: 20px 40px;
-}
-
-.red-btn {
-    background-color: #EF3054;
-    border-color: #EF3054;
-}
-
-.green-btn {
-    background-color: #43AA8B;
-    border-color: #43AA8B;
-}
-
-.grey-btn {
-    background-color: #B2B09B;
-    border-color: #B2B09B;
-}
-
-section.header-top {
-    text-align: center;
-    margin-top: 5rem;
-}
-
-.relax {
-    padding-bottom: 2rem;
-}
-
-.pen-img-under-relax {
-    float: left;
-}
-
-h1 {
-    font-family: 'Ubuntu-L';
-    font-size: 2.5rem;
-    text-align: center;
-    color: #fff;
-}
-
-.subholder {
-    display: inline-block;
-    vertical-align: top;
-    margin: 2rem;
-    text-align: left;
-}
-
-.subheading {
-    color: #fff;
-    font-family: 'Ubuntu-L';
-    font-size: 2.0rem;
-}
-
-#lblRes {
-    display: inline;
-    font-size: 2rem;
-    color: #fffd5e;
-    font-family: 'Ubuntu';
-    margin-right: 2rem;
-}
-
-.dollar_sign {
-    display: inline;
-    font-size: 2rem;
-    color: #fffd5e;
-    font-family: 'Ubuntu';
-    margin-left: .5rem;
-}
-
-.calc_order {
-    padding: .5rem 3rem;
-    background-color: #f05c42;
-    border-radius: 1rem;
-    text-decoration: none;
-    font-family: 'Ubuntu';
-    color: black;
-    float: right;
-    margin-left: 6rem;
-    margin-right: .5rem;
-}
-
-h2 {
-    font-family: 'Ubuntu-L';
-    font-size: 2.3rem;
-    color: #2C3C69;
-}
-
-.calc_h3 {
-    padding: 0;
-    color: black;
-    font-family: 'Ubuntu';
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-label {
-    height: 2rem;
-    margin: .5rem;
-    display: inline-block;
-}
-
-select {
-    height: 2rem;
-    border-radius: .3rem;
-    margin-left: 1rem;
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    text-align: center;
-    display: inline-block;
-    float: right;
-    width: 170px;
-    font-family: 'OpenSans-Regular';
-    line-height: 1.7;
-}
-
-option {
-    font-family: 'OpenSans-Regular';
-    line-height: 1.7;
-}
-
-fieldset {
-    border: 1px solid transparent;
-    margin: 0;
-    font-family: 'Ubuntu';
-    color: black;
-}
-
-@media screen and (max-width: 480px) {
-    select {
-        float: none;
-    }
-    label {
-        display: block;
-    }
-    hr {
-        width: 80%;
-    }
-    .calculator {
-        padding: 2rem 0;
-        margin: 0;
-    }
-    .calc_order {
-        display: block;
-        margin: 2rem;
-    }
-    header {
-        padding: 20px;
-        position: relative;
-    }
-    h2 {
-        padding: 0rem 1rem;
-        font-size: 1.6rem;
-    }
-    .subholder {
-        margin: 2rem 0rem;
-    }
-    h3 {
-        font-size: 1em !important;
-    }
-}
-
-@media screen and (max-width: 680px) {
-    .iconic {
-        min-width: 96%;
-    }
-}
-
-.logo>a>img {
-    width: 192px;
-}
-
-hr {
-    border: none;
-    border-top: 1px dotted #fff;
-    color: #fff;
-    background-color: #fff;
-    height: 1px;
-}
-
 /**Start of Header**/
-
-header {
-    padding-top: 20px;
-    padding-left: 3%;
-    padding-right: 3%;
-}
 
 /* Remove margins and padding from the list and add a white background*/
 
@@ -433,6 +208,242 @@ ul.topnav li.dropdown_holder ul.dropdown li {
 ul.topnav li.dropdown_holder ul.dropdown li a {
     color: #fff;
     font-weight: normal;
+}
+
+/* ----- End of Navigation ----- */
+
+section.header-top {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.relax_heading {
+    margin-top: 7rem;
+    font-weight: bold;
+    margin-bottom: 4rem;
+}
+
+/* Icons section */
+
+.icons {
+    text-align: center;
+}
+
+.iconic {
+    max-width: 320px;
+    display: inline-block;
+    margin: 4rem;
+}
+
+.iconic>i {
+    font-size: 4.4rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.iconic>.fa-diamond {
+    font-size: 4.0rem;
+}
+
+.icon-circle-background {
+    border: 1px solid #1895d8;
+    background-color: #1895d8;
+    border-radius: 50%;
+    padding: 23px;
+    width: 118px;
+    height: 118px;
+}
+
+/* end of icons section  */
+
+.calculator {
+    border: #FF6F59 2px solid;
+    border-radius: 3rem;
+    vertical-align: middle;
+    padding: 1rem 2rem;
+    text-align: left;
+    float: left;
+    background-color: white;
+}
+
+.display_cost {
+    text-align: center;
+    display: inline;
+    padding: 1rem;
+    font-family: 'Ubuntu';
+    color: #fff;
+}
+
+/* buttons  */
+
+.red-btn,
+.green-btn,
+.relax_heading {
+    color: white;
+}
+
+.btn-xl {
+    font-size: 18px;
+    padding: 20px 40px;
+}
+
+.red-btn {
+    background-color: #EF3054;
+    border-color: #EF3054;
+}
+
+.grey-btn {
+    background-color: #B2B09B;
+}
+
+.card-btn,
+.green_btn {
+    background-color: #43AA8B;
+    color: white;
+    border-color: #B2B09B;
+}
+
+.card-btn {
+    font-size: 10px;
+}
+
+.floating-right-btn {
+    float: right;
+}
+
+/* end of buttons */
+
+.subholder {
+    display: inline-block;
+    vertical-align: top;
+    margin: 2rem;
+    text-align: left;
+}
+
+.subheading {
+    color: #fff;
+    font-family: 'Ubuntu-L';
+    font-size: 2.0rem;
+}
+
+#lblRes {
+    display: inline;
+    font-size: 2rem;
+    color: #fffd5e;
+    font-family: 'Ubuntu';
+    margin-right: 2rem;
+}
+
+.dollar_sign {
+    display: inline;
+    font-size: 2rem;
+    color: #fffd5e;
+    font-family: 'Ubuntu';
+    margin-left: .5rem;
+}
+
+.calc_order {
+    padding: .5rem 3rem;
+    background-color: #f05c42;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-family: 'Ubuntu';
+    color: black;
+    float: right;
+    margin-left: 6rem;
+    margin-right: .5rem;
+}
+
+.calc_h3 {
+    padding: 0;
+    color: black;
+    font-family: 'Ubuntu';
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+label {
+    height: 2rem;
+    margin: .5rem;
+    display: inline-block;
+}
+
+select {
+    height: 2rem;
+    border-radius: .3rem;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    text-align: center;
+    display: inline-block;
+    float: right;
+    width: 170px;
+    font-family: 'OpenSans-Regular';
+    line-height: 1.7;
+}
+
+option {
+    font-family: 'OpenSans-Regular';
+    line-height: 1.7;
+}
+
+fieldset {
+    border: 1px solid transparent;
+    margin: 0;
+    font-family: 'Ubuntu';
+    color: black;
+}
+
+@media screen and (max-width: 480px) {
+    select {
+        float: none;
+    }
+    label {
+        display: block;
+    }
+    hr {
+        width: 80%;
+    }
+    .calculator {
+        padding: 2rem 0;
+        margin: 0;
+    }
+    .calc_order {
+        display: block;
+        margin: 2rem;
+    }
+    header {
+        padding: 20px;
+        position: relative;
+    }
+    h2 {
+        padding: 0rem 1rem;
+        font-size: 1.6rem;
+    }
+    .subholder {
+        margin: 2rem 0rem;
+    }
+    h3 {
+        font-size: 1em !important;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .iconic {
+        min-width: 96%;
+    }
+}
+
+.logo>a>img {
+    width: 192px;
+}
+
+hr {
+    border: none;
+    border-top: 1px dotted #fff;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
 }
 
 /*Other Stuff*/
@@ -680,20 +691,6 @@ p {
     -webkit-box-orient: vertical;
 }
 
-.card-btn,
-.green_btn {
-    background-color: #43AA8B;
-    color: white;
-}
-
-.card-btn {
-    font-size: 10px;
-}
-
-.floating-right-btn {
-    float: right;
-}
-
 .card-header:hover {
     color: white;
     background-color: #254441 !important;
@@ -769,14 +766,6 @@ button.content_accordion.active:after {
 
 .button_holder {
     text-align: center;
-}
-
-h3 {
-    font-family: "Ubuntu-L";
-    font-size: 1.4rem;
-    font-weight: normal;
-    padding: 0;
-    margin: 0;
 }
 
 footer {

@@ -768,14 +768,13 @@ button.content_accordion.active:after {
     text-align: center;
 }
 
-footer {
-    background-color: #14193a;
+.footer-section {
+    background-color: #B2B09B !important;
+    font-size: 100%;
     padding: 0rem 1rem 3rem 1rem;
     text-align: center;
     color: #fff;
-    font-size: .9rem;
     font-family: "OpenSans-Regular";
-    margin-top: -2rem;
 }
 
 .footer_links {

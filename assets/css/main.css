@@ -779,6 +779,9 @@ button.content_accordion.active:after {
 
 .footer_links {
     padding: 2rem;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: "Ubuntu";
 }
 
 .footer_links a {
@@ -806,6 +809,14 @@ button.content_accordion.active:after {
     width: 100%;
 }
 
+.copyright {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: "Ubuntu";
+}
 .top_scroller {
     position: fixed;
     bottom: 10px;

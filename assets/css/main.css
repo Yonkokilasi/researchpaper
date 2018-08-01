@@ -686,6 +686,7 @@ p {
 
 .card-header {
     background-color: rgba(239, 241, 242, 1) !important;
+    height: 65px;
 }
 
 .card .to-show {

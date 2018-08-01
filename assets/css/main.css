@@ -311,6 +311,7 @@ section.header-top {
     background-color: #43AA8B;
     color: white;
     border-color: #B2B09B;
+    margin-top: 15
 }
 
 .card-btn {
@@ -665,6 +666,19 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 2rem;
+    
+}
+@media (max-width:600px){
+    .contents_container{
+        margin-left: 2rem;
+    }
+    .contents_container_heading {
+        margin-bottom: 3rem;
+    }
+    .cards-wrapper .card {
+        height: 400px;
+        margin-bottom: 4rem;
+    }
 }
 
 .cards-wrapper {
@@ -678,6 +692,7 @@ p {
 
 .cards-wrapper .card {
     height: 350px;
+    margin-bottom: 4rem;
 }
 
 .list-group-item {
@@ -713,11 +728,11 @@ p {
 
 .card-header:hover {
     color: white;
-    background-color: #254441 !important;
+    background-color: #1098a0 !important;
 }
 
 .card-body:hover {
-    background-color: #FF6F59;
+    background-color: #B2B09B;
     color: white;
     /* background: -webkit-linear-gradient(45deg, #853c8a 0, #3cdcea 100%); */
     transition: background 400ms linear;

@@ -69,7 +69,7 @@ h3 {
     background-image: url(../img/pen.jpg);
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 700px;
     background-attachment: fixed;
 }
 
@@ -78,6 +78,10 @@ h3 {
 .navbar.fixed-top.scrolled {
     background-color: #B2B09B !important;
     transition: background-color 200ms linear;
+}
+
+.navbar-brand>.logo-scrolled {
+    width: 130px;
 }
 
 /**Start of Header**/
@@ -111,6 +115,11 @@ ul.topnav li a {
     font-size: 17px;
     font-weight: bold;
     font-family: "Ubuntu";
+}
+
+ul.topnav li>.nav-link-scrolled {
+    font-size: 14px;
+    padding: 0 8px;
 }
 
 .special_link {
@@ -214,13 +223,14 @@ ul.topnav li.dropdown_holder ul.dropdown li a {
 
 section.header-top {
     text-align: center;
-    margin-top: 5rem;
+    padding-top: 125px;
+    padding-bottom: 200px;
 }
 
 .relax_heading {
     margin-top: 7rem;
     font-weight: bold;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
 }
 
 /* Icons section */
@@ -304,7 +314,7 @@ section.header-top {
 }
 
 .card-btn {
-    font-size: 10px;
+    font-size: 14px;
 }
 
 .floating-right-btn {
@@ -467,16 +477,25 @@ p {
 
 .mockup {
     display: inline-block;
-    max-width: 670px;
     vertical-align: top;
     margin-top: 4em;
     text-align: center;
+}
+
+.left-get-started-section {
+    background-image: url(../img/laptop.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .step_holder {
     display: block;
     margin: 4.8em 4em;
     text-align: left;
+}
+
+.step_holder>.fa {
+    color: #254441;
 }
 
 .step_holder_2 {
@@ -657,7 +676,7 @@ p {
     margin-bottom: 3rem;
 }
 
-.cards-wrapper.card {
+.cards-wrapper .card {
     height: 350px;
 }
 

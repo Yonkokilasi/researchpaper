@@ -1,13 +1,5 @@
-//Notification
-$(".alert").delay(30000).fadeOut(10000);
 
 $(document).ready(function () {
-
-    // change color of navbar onscroll
-    $(document).scroll(function () {
-        var $nav = $(".navbar");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-    });
 
     // $(":submit").attr("disabled", true);
 

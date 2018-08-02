@@ -81,37 +81,37 @@ include("php/connect.php");
                 </div>
             </nav>
         </div>
-    </div>
 
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
             }
-        }
-    </script>
+        </script>
 
-    <section class="header-top">
+        <section class="header-top">
 
-        <div class="row">
-            <h1 class="relax_heading col-md-12">Relax, We Write Your Research Papers and Essays!</h1>
-            <!-- Buttons section -->
-            <div class="col-md-4">
-                <a class="btn btn-xl text-uppercase red-btn" href="#learn-more-cards">Learn more</a>
-            </div>
-            <div class="col-md-4">
-                <a class="btn btn-xl text-uppercase green_btn" href="#get-started">Get Started</a>
-            </div>
-            <div class="col-md-4">
-                <a class="btn btn-xl text-uppercase grey-btn" href="post-order.php" rel="nofollow">Order now</a>
-            </div>
-            <!-- end of button section -->
+            <div class="row">
+                <h1 class="relax_heading col-md-12">Relax, We Write Your Research Papers and Essays!</h1>
+                <!-- Buttons section -->
+                <div class="col-md-4">
+                    <a class="btn btn-xl text-uppercase red-btn" href="#learn-more-cards">Learn more</a>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-xl text-uppercase green_btn" href="#get-started">Get Started</a>
+                </div>
+                <div class="col-md-4">
+                    <a class="btn btn-xl text-uppercase grey-btn" href="post-order.php" rel="nofollow">Order now</a>
+                </div>
+                <!-- end of button section -->
 
-            <div class=" col-md-6">
-                <!-- <div class="calculator">
+                <div class=" col-md-6">
+                    <!-- <div class="calculator">
                         <h3 class="calc_h3">Calculate Your Price Here</h3>
                         <hr />
                         <form method="post" action="" id="calc">
@@ -169,55 +169,51 @@ include("php/connect.php");
                             <a class="calc_order" href="post-order.php" rel="nofollow">CONTINUE</a>
                         </div>
                     </div> -->
+                </div>
+
             </div>
+            <script type="text/javascript">
+                function Calculate() {
+                    var l = document.getElementById('level').value;
+                    var p = document.getElementById('page').value;
+                    var d = document.getElementById('deadline').value;
+                    var result = l * p * d * 10.5 + 2.0;
+                    result = parseFloat(result).toFixed(0);
+                    document.getElementById('lblRes').innerHTML = result;
+                }
+            </script>
+
+        </section>
+    </div>
+    </div>
+    <section class="icons">
+
+        <div class="iconic">
+            <i class="fa fa-briefcase icon-circle-background"></i>
+
+            <h4>Professional writers</h4>
+
+            <p>With the minimum qualification being a Bachelor's, we got the best writers.</p>
 
         </div>
-        <script type="text/javascript">
-            function Calculate() {
-                var l = document.getElementById('level').value;
-                var p = document.getElementById('page').value;
-                var d = document.getElementById('deadline').value;
-                var result = l * p * d * 10.5 + 2.0;
-                result = parseFloat(result).toFixed(0);
-                document.getElementById('lblRes').innerHTML = result;
-            }
-        </script>
+
+        <div class="iconic">
+            <i class="fa fa-diamond icon-circle-background"></i>
+
+            <h4>Quality work</h4>
+
+            <p>With close adherence to quality, we ensure that we submit only perfect papers.</p>
+        </div>
+
+        <div class="iconic">
+            <i class="fa fa-shield icon-circle-background"></i>
+
+            <h4>Non-plagiarized papers</h4>
+
+            <p>Only original research papers that meet world standards are our cup of tea.</p>
+        </div>
 
     </section>
-    </div>
-
-    <div class="container icons">
-        <div class="row">
-            <div class="col-sm">
-                <div class="iconic">
-                    <i class="fa fa-briefcase icon-circle-background"></i>
-
-                    <h4>Professional writers</h4>
-
-                    <p>With the minimum qualification being a Bachelor's, we got the best writers.</p>
-
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="iconic">
-                    <i class="fa fa-diamond icon-circle-background"></i>
-
-                    <h4>Quality work</h4>
-
-                    <p>With close adherence to quality, we ensure that we submit only perfect papers.</p>
-                </div>
-            </div>
-            <div class="col-sm">
-                <div class="iconic">
-                    <i class="fa fa-shield icon-circle-background"></i>
-
-                    <h4>Non-plagiarized papers</h4>
-
-                    <p>Only original research papers that meet world standards are our cup of tea.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <section id="get-started" class="icons_2  container-fluid">
@@ -250,6 +246,13 @@ include("php/connect.php");
                         order, we review it to determine the most qualified writer to handle it. We then assign it and the
                         status changes to "In Progress", the stage during which you can chat with the writer to monitor the
                         order's progress.</p>
+                </div>
+                <div class="step_holder">
+                    <h3>Receive your paper</h3>
+                    <p class="aligned">
+                        After the writer is done writing your paper, they post its answer to the files section of your order where you can download
+                        it. You can either approve the order if it meets your requirements or request for necessary revisions
+                        until you are satisfied.</p>
                 </div>
                 <div class="step_holder">
                     <a class=" red-btn btn btn-xl" href="post-order.php" rel="nofollow">Start now</a>
